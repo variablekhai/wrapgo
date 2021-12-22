@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/678951087b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="account_style.css" rel="stylesheet">
+    <title>Account Page</title>
+</head>
+<body>
+     <!-- Mobile Header Starts -->
+   <div class="mobile-header bg-white section p-4 my-3">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col">
+                <a href="index.html"><img src="assets/wglogo.svg" alt="Logo" width="250px"></a>
+            </div>
+            <div class="col-auto">
+                <div class="header-icons justify-content-end">
+                     <div class="user-icon">
+                         <a href="account.html"><img src="assets/user.png" alt="user-icon" width="20px"></a>
+                     </div>
+                     <div class="search-icon">
+                         <a href="#"><img src="assets/search.png" alt="search-icon" width="20px"></a>
+                     </div>
+                     <div class="bag-icon">
+                         <a href="#"><img src="assets/bag.png" alt="bag-icon" width="30px"></a>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Mobile Header Ends -->
+<!-- Main Title Starts -->
+<div class="page-title section" style="background-image: url(assets/account-bg-img.webp)">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="title">My Account</p>
+                <p class="breadcrumbs" style="font-family: Futura; font-weight: 700;"><a href="index.html" class="text-decoration-none text-muted">Home</a> > My Account</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Main Title Ends -->
+<!-- Nav Tabs Starts -->
+<div class="container account-tab-list mb-5">
+    <div class="row">
+        <div class="col-lg-3">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#dashboard" data-toggle="tab">Dashboard<i class="fas fa-home"></i></a></li>
+                <li class=""><a href="#orders" data-toggle="tab">Orders<i class="far fa-file-alt"></i></a></li>
+                <li class=""><a href="#address" data-toggle="tab">Address<i class="fas fa-map-marker-alt"></i></a></li>
+                <li class=""><a href="#" data-toggle="tab">Logout<i class="fas fa-sign-out-alt"></i></a></li>
+            </ul>
+        </div>
+        <div class="col-lg-9 px-5">
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="dashboard">
+                    <p class="greet">Hello <a id="username">Khai, Tasha, Aisyah</a>!</p>
+                </div>
+                <div class="tab-pane fade" id="orders">
+                    <table class="table table-responsive">
+                        <thead>
+                            <tr>
+                                <th scope="col">Order</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <th scope="row">1</th>
+                            <td>22/12/2021</td>
+                            <td>Pending</td>
+                            <td>RM135</td>
+                            </th>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="address">
+                    <p class="address-title">Address</p>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputName">Name</label>
+                                <input type="text" class="form-control" id="nameInput">
+                                <label for="inputAddress">Address</label>
+                                <input type="text" class="form-control" id="addressInput">
+                                <label for="inputPhone">Phone Number</label>
+                                <input type="number" class="form-control" id="phoneInput">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Nav Tabs Ends -->
+<!-- Footer Starts -->
+<div class="acc-footer">
+    <div class="container border-top border-1 text-muted">
+        <p class="copyright">© 2021 Wrap & Go. All Rights Reserved</p>
+    </div>
+</div>
+<!-- Footer Ends -->
+</body>
+</html>
+
+<script>
+    $(".nav li").on("click", function(){
+        $(".nav li").removeClass("active");
+        $(this).addClass("active");
+    });
+</script>

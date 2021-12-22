@@ -1,0 +1,71 @@
+@import url(style.css);
+
+body {
+    font-family: Futura;
+}
+.page-title {
+    padding: 130px;
+}
+
+.title {
+    font-family: Marcellus;
+    font-size: 36pt;
+
+    animation: fadeInLeft;
+    animation-duration: 0.8s;
+}
+
+.account-tab-list {
+    padding-top: 70px;
+}
+
+.nav-tabs {
+    display: flex;
+    flex-direction: column;
+}
+
+ul .active {
+    background-color: #FAFAFA;
+}
+
+.nav-tabs a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    padding: 15px 20px;
+    border: 1px solid #EEEEEE;
+    font-weight: 700;
+    color: #696969;
+}
+
+.greet {
+    padding: 20px 30px;
+    font-weight: 500;
+    background-color: #FAFAFA;
+    color: #696969;
+}
+
+.greet a {
+    font-weight: 700;
+}
+
+#address p {
+    font-size: 32px;
+    font-family: Marcellus;
+}
+
+.copyright {
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.tab-pane.fade {
+    transition: all 0.2s;
+    transform: translateY(1rem);
+  }
+  
+  .tab-pane.fade.show {
+    transform: translateY(0rem);
+  }

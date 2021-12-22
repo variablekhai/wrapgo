@@ -146,3 +146,13 @@ body {
 .sub-btn:hover {
     background-color: #4E6C67;
 }
+
+.sub-title {
+    animation: fadeIn;
+    animation-duration: 3s;
+}
+
+.shop-now-btn {
+    animation: fadeInUp;
+    animation-duration: 2s;
+}
