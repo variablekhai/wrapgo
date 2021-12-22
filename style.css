@@ -1,0 +1,148 @@
+@font-face {
+    font-family: Modesty;
+    src: url(fonts/Modesty.ttf);
+}
+
+@font-face {
+    font-family: Marcellus;
+    src: url(fonts/Marcellus.ttf);
+}
+
+@font-face {
+    font-family: Futura;
+    src: url(fonts/Futura\ Book.ttf);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.topbar p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #696969;
+}
+
+.header-icons {
+    display: flex;
+    gap: 25px;
+}
+
+.hero-main {
+    height: 32rem;
+    background: #fff;
+    color: #000;
+    position: relative;
+}
+
+.hero-main .container {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   position: absolute;
+   top: 10rem;
+   left: 18rem;
+   text-align: center;
+}
+
+.hero-main img {
+    position: absolute;
+    left: 5rem;
+}
+
+.hero-main h1 {
+    font-family: Modesty;
+    font-size: 50pt;
+}
+
+.hero-main h2 {
+    font-family: Marcellus;
+    width: 100%;
+    font-size: 40pt;
+}
+
+.hero-main .shop-now {
+    color: #000;
+    padding-bottom: 3px;
+    border-bottom: 2px solid #000;
+}
+
+.deals .container {
+    margin-top: 5rem;
+    margin-left: 7rem;
+}
+
+.deals p {
+    font-family: Marcellus;
+    font-size: 32pt;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-name {
+    font-family: Futura;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.product-price {
+    font-family: Futura;
+    font-weight: 700;
+    color: #F8796C;
+}
+
+.fa {
+    font-size: 15px;
+    margin-right: 2px;
+}
+
+.rating-color {
+    color: #fbc634 !important
+}
+
+.product-deals {
+    margin-bottom: 5rem;
+}
+
+.footer {
+    background-color: #F8F9FA;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding: 50px;
+}
+
+.footer .row .col {
+    justify-content: center;
+}
+
+.newsletter-form {
+    border-radius: 25px;
+    width: 600px;
+}
+
+.sub-btn {
+    position: absolute;
+    font-family: Futura;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    background-color: #000;
+    color: #F8F9FA;
+    border-radius: 25px;
+    height: 38px;
+    width: 150px;
+    right: 30%;
+}
+
+.sub-btn:hover {
+    background-color: #4E6C67;
+}
