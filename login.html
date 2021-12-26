@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.2.0/dist/bootstrap-validate.js" ></script>
     <script src="https://kit.fontawesome.com/678951087b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="login.css" rel="stylesheet">
@@ -56,22 +57,24 @@
             <div class="col-md-6 login-box d-flex flex-column align-items-center">
                 <p class="login-title">Login</p>
                  <p class="login-desc">Great to have you back!</p>
-                 <form class="d-flex flex-column">
-                    <input type="text" class="inputEmail" placeholder="E-mail address">
-                    <input type="text" class="inputPassword" placeholder="Password">
-                    <button type="submit" class="login-btn">LOGIN</button>
+                 <form class="d-flex flex-column" action='login_action.php' method="post">
+                    <input type="text" class="form-control inputEmail" placeholder="E-mail address" name="email" id="userLogEmail">
+                    <input type="text" class=" form-control inputPassword" placeholder="Password" name="password" id="userLogPassword">
+                    <p class="isLoginValid"></p>
+                    <button type="submit" name="submit" class="login-btn">LOGIN</button>
                  </form>
             </div>
             <div class="col-md-6 register-box d-flex flex-column align-items-center">
                 <p class="register-title">Register</p>
                  <p class="register-desc">Don't have an account? Register now!</p>
-                 <form class="register-form-box d-flex flex-column">
+                 <form class="register-form-box d-flex flex-column" name="reg_user" action="register_action.php" method="post">
                     <p class="reg-email-title">E-mail address<a class="required text-decoration-none">*</a></p>
-                    <input type="text" class="inputRegEmail">
+                    <input type="text" class="form-control inputRegEmail" name="reg-email" id="userRegEmail">
                     <p class="reg-password-title">Password<a class="required text-decoration-none">*</a></p>
-                    <input type="text" class="inputRegPassword">
+                    <input type="text" class="form-control inputRegPassword" name="reg-password" id="userRegPassword">
+                    <p class="isRegisterValid"></p>
+                    <button type="submit" name="submit" class="register-btn" onclick="isRegisterValid()">REGISTER</button>
                  </form>
-                    <button type="submit" class="register-btn">REGISTER</button>
             </div>
         </div>
     </div>
@@ -87,3 +90,20 @@
 <!-- Footer Ends -->
 </body>
 </html>
+
+<!-- Script -->
+<script>
+    bootstrapValidate('#userLogEmail', 'email:Enter a valid email address!');
+    bootstrapValidate('#userRegEmail', 'email:Enter a valid email address!');
+
+    function isRegisterValid() {
+        let email = document.querySelector("#userRegEmail");
+        let password = document.querySelector("#userRegPassword");
+
+        if (email.value == "" || password.value == "") {
+            alert("Email Address/Password is required!")
+            return false;
+        }
+
+    }
+</script>

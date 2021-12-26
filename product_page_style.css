@@ -1,0 +1,89 @@
+@import url(login.css);
+
+body {
+    font-family: Futura;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.content-row {
+    gap: 50px;
+}
+
+.product-name {
+    font-family: Marcellus;
+    font-size: 32pt;
+}
+
+.product-price {
+    font-size: 18pt;
+}
+
+.product-desc {
+    font-size: 14pt;
+}
+
+.main-q-container {
+    margin-bottom: 50px;
+}
+
+.q-container {
+	display: flex;
+	cursor: pointer;
+	justify-content: center;
+	gap: 10px;
+	border-bottom: thin solid #ccc;
+	width: 100px;
+	padding-left: 10px;
+	padding-right: 10px;
+    margin-left: 20px;
+}
+
+.q-container:hover {
+	border-bottom: thin solid #000;
+	transition: border 0.5s ease-in-out;
+}
+
+.q-box {
+	width: 35px;
+	padding: 5px;
+	text-align: center;
+	color: black;
+}
+
+.q-box:focus {
+	outline: none;
+}
+
+.q-button, .q-box {
+	font-size: 20px;
+	border-style: none;
+	background-color: #fff;
+}
+
+.q-button {
+	color: #ccc;
+	cursor: pointer;
+}
+
+.atc-btn {
+    font-size: 12pt;
+    background-color: #000;
+    color: #fff;
+    border-radius: 25px;
+    padding: 10px;
+    width: 200px;
+    box-shadow: none;
+    border: thin solid #fff;
+}
+
+.atc-btn:hover {
+    background-color: #fff;
+    color: #000;
+    border: thin solid #000;
+    transition: border 0.3s ease-in-out;
+}
+
+
